@@ -1,4 +1,5 @@
-
+import React from "react"
+import { Link } from "react-router-dom"
 
 
 function Taches() {
@@ -14,12 +15,12 @@ function Taches() {
                     </div>
 
                     <div className="mt-4 flex flex-col gap-4 sm:mt-0 sm:flex-row sm:items-center">
-                        <a href="/todo" className="underline underline-offset-1 text-indigo-600 hover:text-indigo-300">Ajouter</a>
+                        <Link to={"/todo"}className="underline underline-offset-1 text-indigo-600 hover:text-indigo-300">Retour</Link>
                         <button
                         className="block rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring"
                         type="button"
                         >
-                        <a href="/">Deconnexion</a>
+                        <Link to={"/"}>Deconnexion</Link>
                         </button>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Connexion() {
     return(
@@ -6,9 +7,7 @@ function Connexion() {
         <section className="relative flex flex-wrap lg:h-screen lg:items-center">
         <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
             <div className="mx-auto max-w-lg text-center">
-            <a className="block text-indigo-500 font-extrabold" href="/">
-                TodoApp
-            </a>
+                <Link to={"/"} className="block text-indigo-500 font-extrabold">TodoApp</Link>
             <h1 className="text-2xl font-bold sm:text-3xl">Get started today!</h1>
 
             <p className="mt-4 text-gray-500">
@@ -85,16 +84,14 @@ function Connexion() {
             <div className="flex items-center justify-between">
                 <p className="text-sm text-gray-500">
                 Pas un compte ?
-                <a className="underline" href="/inscription">S'inscrire</a>
+                <Link to={"/inscription"} className="underline">S'inscrire</Link>
                 </p>
 
                 <button
                 type="submit"
                 className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
                 >
-                <a href="/todo">
-                Se connecter
-                </a>
+                <Link to={"/todo"}>Se connecter</Link>
                 </button>
             </div>
             </form>

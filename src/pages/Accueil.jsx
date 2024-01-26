@@ -1,4 +1,5 @@
-
+import React from "react"
+import { Link } from "react-router-dom"
 
 
 function Accueil() {
@@ -8,52 +9,16 @@ function Accueil() {
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-16 items-center justify-between">
                 <div className="md:flex md:items-center md:gap-12">
-                    <a className="block text-indigo-500 font-extrabold" href="/">
-                    TodoApp
-                    </a>
-                </div>
-
-                <div className="hidden md:block">
-                    <nav aria-label="Global">
-                    <ul className="flex items-center gap-6 text-sm">
-                        <li className="text-gray-500 transition hover:text-gray-500/75">
-                        Accueil
-                        </li>
-
-                        <li>
-                        <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Apropos </a>
-                        </li>
-
-                        <li>
-                        <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Blog </a>
-                        </li>
-
-                        <li>
-                        <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Contacts </a>
-                        </li>
-                    </ul>
-                    </nav>
+                    <Link to={"/"} className="block text-indigo-500 font-extrabold">TodoApp</Link>
                 </div>
 
                 <div className="flex items-center gap-4">
                     <div className="sm:flex sm:gap-4">
-                        {/* Base */}
+                    <Link to={"/inscription"} className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
+                        >S'inscrire</Link>
 
-                        <a
-                        className="inline-block rounded bg-indigo-600 px-8 py-3 text-sm font-medium text-white transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:bg-indigo-500"
-                        href="/inscription"
-                        >
-                        S'inscrire
-                        </a>
-
-                        {/* Border */}
-
-                        <a
-                        className="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
-                        href="/connexion"
-                        >
-                        Connexion
-                        </a>
+                        <Link to={"/connexion"} className="inline-block rounded border border-current px-8 py-3 text-sm font-medium text-indigo-600 transition hover:scale-110 hover:shadow-xl focus:outline-none focus:ring active:text-indigo-500"
+                         >Connexion</Link>
                     </div>
 
                     <div className="block md:hidden">
@@ -87,17 +52,12 @@ function Accueil() {
 
                     <div className="lg:py-24">
                         <h2 className="text-3xl font-bold sm:text-4xl">Ma todo liste</h2>
-
                         <p className="mt-4 text-gray-600">
                         Bienvenue dans votre application appelé "TodoApp" qui est une application qui vous permettras de lister vos tâches, de la journée, de la semaine etc... Soyez les bienvenue et profiter au maximum de nos services
                         </p>
 
-                        <a
-                        href="/inscription"
-                        className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
-                        >
-                        Commencer maintenant
-                        </a>
+                        <Link to={"/inscription"} className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
+                        >Commencer maintenant</Link>
                     </div>
                     </div>
                 </div>
@@ -326,68 +286,17 @@ function Accueil() {
                 </div>
             </section>
 
-            <footer className="bg-gray-100">
-            <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-                <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
-                <a
-                    className="inline-block rounded-full bg-indigo-600 p-2 text-white shadow transition hover:bg-indigo-500 sm:p-3 lg:p-4"
-                    href="/"
-                >
-                    <span className="sr-only">Back to top</span>
-
-                    <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    >
-                    <path
-                        fillRule="evenodd"
-                        d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-                        clipRule="evenodd"
-                    />
-                    </svg>
-                </a>
+            <footer className="bg-gray-50">
+            <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+                <div className="sm:flex sm:items-center sm:justify-between">
+                <div className="flex justify-center text-teal-600 sm:justify-start">
+                <Link to={"/"} className="block text-indigo-500 font-extrabold">TodoApp</Link>
                 </div>
 
-                <div className="lg:flex lg:items-end lg:justify-between">
-                <div>
-                    <div className="flex justify-center text-teal-600 lg:justify-start">
-                    <a className="block text-indigo-500 font-extrabold" href="/">
-                    TodoApp
-                    </a>
-                    </div>
-
-                    <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt consequuntur amet culpa
-                    cum itaque neque.
-                    </p>
-                </div>
-
-                <ul
-                    className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
-                >
-                    <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> About </a>
-                    </li>
-
-                    <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Services </a>
-                    </li>
-
-                    <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Projects </a>
-                    </li>
-
-                    <li>
-                    <a className="text-gray-700 transition hover:text-gray-700/75" href="/"> Blog </a>
-                    </li>
-                </ul>
-                </div>
-
-                <p className="mt-12 text-center text-sm text-gray-500 lg:text-right">
-                Copyright &copy; 2022. All rights reserved.
+                <p className="mt-4 text-center text-sm text-gray-500 lg:mt-0 lg:text-right">
+                    Copyright &copy; 2022. All rights reserved.
                 </p>
+                </div>
             </div>
             </footer>
         </>
