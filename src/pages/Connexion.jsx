@@ -87,12 +87,12 @@ function Connexion() {
                 <Link to={"/inscription"} className="underline">S'inscrire</Link>
                 </p>
 
-                <button
+                <Link to={"/todo"}><button
                 type="submit"
                 className="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
                 >
-                <Link to={"/todo"}>Se connecter</Link>
-                </button>
+                Se connecter
+                </button></Link>
             </div>
             </form>
         </div>

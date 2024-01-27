@@ -41,12 +41,12 @@ function Todo() {
                         ></textarea>
                     </div>
                 </div>
-                <button
+                <Link to={"/taches"}><button
                     type="submit"
                     className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
                 >
-                    <Link to={"/taches"}>Ajouter</Link>
-                </button>
+                    Ajouter
+                </button></Link>
                 </form>
             </div>
         </div>
